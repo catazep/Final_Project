@@ -10,5 +10,9 @@ package Library;
  * @author Catalin
  */
 public class Reader {
+    int CNP;
+    int readerGroup;
+    String readerName;
+    
     
 }

@@ -16,7 +16,7 @@ public class Book {
     String bookAuthor;
     String bookType;
     boolean status;//imprumutata sau neimprumutata
-    Date dataImprumut;
-    Date dataLimita;
+    Date dateBorrow;
+    Date dateLimit;
     
 }
