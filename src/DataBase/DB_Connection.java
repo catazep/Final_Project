@@ -44,7 +44,7 @@ public class DB_Connection {
         }
     }
     
-    public void getData()
+    public void getData()   //de inclus in clasa book/reader, depinzand de ce face
     {
         try
         {
