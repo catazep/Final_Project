@@ -17,7 +17,8 @@ import java.sql.Statement;
  */
 
 
-public class DB_Connection {
+public class DB_Connection
+{
     private Connection con;
     private Statement st;
     private ResultSet rs;
@@ -30,7 +31,7 @@ public class DB_Connection {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println();
             
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","root");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Library","root","");
             
           
             
@@ -48,18 +49,20 @@ public class DB_Connection {
     {
         try
         {
-            String query = "SELECT * FROM `Persons`";
+            String query = "SELECT * FROM `Readers`";
             rs = st.executeQuery(query);
             System.out.println("Recors of database");
             {
                 while(rs.next())
                 {
-                    String cnp = rs.getString("cnp");
-                    String name = rs.getString("name_");
-                    String age = rs.getString("group_");
+                    int id = rs.getInt("readerID");
+                    String cnp = rs.getString("readerCNP");
+                    String name = rs.getString("readerName");
+                    int group = rs.getInt("readerGroup");
+                    System.out.println("ID : "+id);
                     System.out.println("CNP : "+cnp);
                     System.out.println("Name : "+name);
-                    System.out.println("Age : "+age);
+                    System.out.println("Group : "+group);
                 }
                 
                         
